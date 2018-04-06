@@ -1,0 +1,315 @@
+// Place all the styles related to the polaroids controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "font-awesome";
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poor Story', cursive;
+  color: #5e5b64;
+
+  /* Create a page-wide stacking context 
+    (so that negative margins work as you expect) */
+
+  position:relative;
+  z-index:0;
+
+}
+
+.wrapper{
+    position:relative;
+
+    width: 100%;
+  	padding: 0 2rem;
+  	text-align: center;
+    z-index:1;
+
+    background: #bdffbd;
+
+    background-image:-webkit-radial-gradient(center, circle farthest-corner, #fff, #e2e2e2);
+    background-image:-moz-radial-gradient(center, circle farthest-corner, #fff, #e2e2e2);
+    background-image:radial-gradient(center, circle farthest-corner, #fff, #e2e2e2);
+
+    padding: 120px 0 600px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
+
+
+.polaroid {
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
+  
+}
+.polaroid > img{
+  max-width: 100%;
+  height: auto;
+}
+.caption {
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 2em;
+}
+.item {
+  width: 30%;
+  display: inline-block;
+  margin-top: 2rem;
+  filter: grayscale(100%);
+}
+.item .polaroid:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transition: all 0.35s;
+}
+.item:nth-of-type(4n+1) {
+  transform: scale(0.8, 0.8) rotate(5deg);
+  transition: all 0.35s;
+}
+.item:nth-of-type(4n+1) .polaroid:before {
+  transform: rotate(6deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  right: 12px;
+  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
+}
+.item:nth-of-type(4n+2) {
+  transform: scale(0.8, 0.8) rotate(-5deg);
+  transition: all 0.35s;
+}
+.item:nth-of-type(4n+2) .polaroid:before {
+  transform: rotate(-6deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  left: 12px;
+  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
+}
+.item:nth-of-type(4n+4) {
+  transform: scale(0.8, 0.8) rotate(3deg);
+  transition: all 0.35s;
+}
+.item:nth-of-type(4n+4) .polaroid:before {
+  transform: rotate(4deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  right: 12px;
+  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
+}
+.item:nth-of-type(4n+3) {
+  transform: scale(0.8, 0.8) rotate(-3deg);
+  transition: all 0.35s;
+}
+.item:nth-of-type(4n+3) .polaroid:before {
+  transform: rotate(-4deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  left: 12px;
+  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
+}
+.item:hover {
+  filter: none;
+  transform: scale(1, 1) rotate(0deg) !important;
+  transition: all 0.35s;
+}
+.item:hover .polaroid:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transform: rotate(0deg);
+  height: 90%;
+  width: 90%;
+  bottom: 0%;
+  right: 5%;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
+  transition: all 0.35s;
+}
+
+
+
+
+/* ## Footer ##*/
+footer{
+    height: 245px;
+    color:#ccc;
+    font-size:12px;
+
+    position:relative;
+    z-index:-2;
+
+    background-color:#31353a;
+
+    background-image:-webkit-linear-gradient(top, #31353a, #2f3337);
+    background-image:-moz-linear-gradient(top, #31353a, #2f3337);
+    background-image:linear-gradient(top, #31353a, #2f3337);
+}
+
+
+footer > ul{
+    width:960px;
+    position:fixed;
+    left:50%;
+    bottom:0;
+    margin-left:-480px;
+    padding-bottom: 60px;
+    z-index:-1;
+}
+
+
+
+
+/* The four columns of links */
+
+footer > ul > li{
+    width:25%;
+    float:left;
+}
+
+footer ul{
+    list-style: none;
+}
+
+/* The links */
+
+footer > ul > li ul li{
+    margin-left:43px;
+    text-transform: uppercase;
+    font-weight:bold;
+    line-height:1.8;
+}
+
+footer > ul > li ul li a{
+    text-decoration: none !important;
+    color:#7d8691 !important;
+}
+
+footer > ul > li ul li a:hover{
+    color:#ddd !important;
+}
+
+footer a.logo{
+    color: #e4e4e4 !important;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    text-transform: uppercase;
+    margin-left: 16px;
+    display: inline-block;
+    margin-top: 7px;
+}
+
+footer a.logo i{
+    font-style: normal;
+    position: absolute;
+    width: 60px;
+    display: block;
+    left: 48px;
+    top: 18px;
+    font-size: 12px;
+    color: #999;
+}
+
+footer a.logo:before{
+    content: '';
+    display: inline-block;
+    width: 48px;
+    height: 37px;
+    vertical-align: text-top;
+}
+
+footer p{
+    width: 90%;
+    margin-right: 10%;
+    padding: 9px 0;
+    line-height: 18px;
+    background-color: #058cc7;
+    font-weight: bold;
+    font-size: 14px;
+    color:#fff;
+    text-transform: uppercase;
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    opacity:0.9;
+    cursor:default;
+
+    -webkit-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+
+footer > ul > li:hover p{
+    opacity:1;
+}
+
+footer p:before{
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    margin: 0 12px 0 15px;
+    vertical-align: text-bottom;
+}
+
+footer p.home{
+    background-color: #0096d6;
+
+    background-image:-webkit-linear-gradient(top, #0096d6, #008ac6);
+    background-image:-moz-linear-gradient(top, #0096d6, #008ac6);
+    background-image:linear-gradient(top, #0096d6, #008ac6);
+}
+
+footer p.home:before{
+    background-position: 0 -110px;
+}
+
+footer p.services{
+    background-color: #00b274;
+
+    background-image:-webkit-linear-gradient(top, #00b274, #00a46b);
+    background-image:-moz-linear-gradient(top, #00b274, #00a46b);
+    background-image:linear-gradient(top, #00b274, #00a46b);
+}
+
+footer p.services:before{
+    background-position: 0 -129px;
+}
+
+footer p.reachus{
+    background-color: #d75ba2;
+
+    background-image:-webkit-linear-gradient(top, #d75ba2, #c75496);
+    background-image:-moz-linear-gradient(top, #d75ba2, #c75496);
+    background-image:linear-gradient(top, #d75ba2, #c75496);
+}
+
+footer p.reachus:before{
+    background-position: 0 -89px;
+}
+
+footer p.clients{
+    background-color: #e9ac40;
+
+    background-image:-webkit-linear-gradient(top, #e9ac40, #d89f3b);
+    background-image:-moz-linear-gradient(top, #e9ac40, #d89f3b);
+    background-image:linear-gradient(top, #e9ac40, #d89f3b);
+}
+
+footer p.clients:before{
+    background-position: 0 -69px;
+}
+
+
+footer > ul > li:nth-child(3) {
+   font-size: 1.8em;
+}
+

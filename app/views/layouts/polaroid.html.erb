@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DragAndDrop</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+     <link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:700" rel="stylesheet" />
+    <%= stylesheet_link_tag    'polaroids', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <div class="wrapper">
+       
+          <%= yield %>
+      
+      </div>
+      <!-- Footer will go here  -->
+      <%= render "shared/footer" %>
+    
+  </body>
+</html>

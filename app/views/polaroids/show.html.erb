@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Caption:</strong>
+  <%= @polaroid.caption %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @polaroid.image %>
+</p>
+
+<%= link_to 'Edit', edit_polaroid_path(@polaroid) %> |
+<%= link_to 'Back', polaroids_path %>
