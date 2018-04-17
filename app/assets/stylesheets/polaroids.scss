@@ -11,12 +11,31 @@
   padding: 0;
 }
 
-html, body {
+html, body{
   height: 100%;  
   letter-spacing: 0.2em;
   font-family: 'Poor Story', cursive;
 
 }
+
+
+/*=== Nav Bar ===*/
+.nav{
+  
+  min-height: 9px;
+  box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+}
+
+.nav-text{
+  text-align: center;
+  font-size: 2.3em;
+  text-transform: uppercase;  
+  padding: 10px 10px;
+  line-height: 1.42857;
+  color: #222;
+}
+
+/*=== Container ===*/
 
 #container{
   background-color: #bdffbd;
@@ -28,38 +47,43 @@ html, body {
   padding-bottom: 100px;
 }
 
-.polaroid {
+.polaroid{
   cursor: move;
   background: #fff;
   padding: 1rem;
-  box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
-  
 }
+
 .polaroid > img{
   max-width: 100%;
   height: auto;
 }
+
 .caption {
   font-size: 1.8rem;
   text-align: center;
   line-height: 2em;
 }
+
 .item {
+  margin-left: 30px;
   width: 30%;
   display: inline-block;
   margin-top: 2rem;
   filter: grayscale(100%);
 }
-.item .polaroid:before {
+
+.item .polaroid:before{
   content: '';
   position: absolute;
   z-index: -1;
   transition: all 0.35s;
 }
+
 .item:nth-of-type(4n+1) {
   transform: scale(0.8, 0.8) rotate(5deg);
   transition: all 0.35s;
 }
+
 .item:nth-of-type(4n+1) .polaroid:before {
   transform: rotate(6deg);
   height: 20%;
@@ -68,10 +92,12 @@ html, body {
   right: 12px;
   box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
 }
+
 .item:nth-of-type(4n+2) {
   transform: scale(0.8, 0.8) rotate(-5deg);
   transition: all 0.35s;
 }
+
 .item:nth-of-type(4n+2) .polaroid:before {
   transform: rotate(-6deg);
   height: 20%;
@@ -104,6 +130,7 @@ html, body {
   left: 12px;
   box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
 }
+
 .item:hover {
   filter: none;
   transform: scale(1, 1) rotate(0deg) !important;
@@ -123,12 +150,12 @@ html, body {
 }
 
 
-// ==== Footer ====
+/* ==== Footer ==== */
 
 .footer-container{
   position: relative;
-  height: 100px;
-  margin-top: -100px;
+  height: 90px;
+  margin-top: -90px;
   clear: both;  
   background-color: #ffffff;
 
@@ -144,22 +171,23 @@ ul > li{
   padding: 10px 30px;
   font-size: 2em;
 
-  .fa{
+}
+
+/* === Social Media ===*/
+
+.fa{
     color: #999898;
   }
 
-  .fa.fa-twitter:hover{
-    color: #326ada  ;
-  }
-
-  .fa.fa-github:hover{
-    color: lightcoral   ;
-  }
-
-  .fa.fa-codepen:hover{
-    color: #000000  ;
-  }
-
+.fa.fa-twitter:hover{
+  color: #326ada  ;
 }
 
+.fa.fa-github:hover{
+  color: lightcoral   ;
+}
+
+.fa.fa-codepen:hover{
+  color: #000000  ;
+}
 
