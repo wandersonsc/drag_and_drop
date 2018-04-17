@@ -4,7 +4,7 @@ class PolaroidsController < ApplicationController
   # GET /polaroids
   # GET /polaroids.json
   def index
-    @polaroids = Polaroid.all
+    @polaroids = Polaroid.by_position
   end
 
   # GET /polaroids/1

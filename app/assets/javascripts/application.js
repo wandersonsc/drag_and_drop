@@ -11,5 +11,8 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery3
+//= require jquery-ui
 //= require turbolinks
+//= require html.sortable
 //= require_tree .

@@ -8,11 +8,23 @@
 
 
 
+
+img = ["https://image.ibb.co/b8UJBc/administration_architecture_big_ben_221166.jpg", "https://image.ibb.co/mmyvrc/anniversary_balloons_birthday_68369.jpg",
+	"https://image.ibb.co/hQaarc/antique_blur_camera_828378.jpg",
+    "https://image.ibb.co/crFarc/pexels_photo_100756.jpg",
+    "https://image.ibb.co/fvekrc/action_adult_art_673649.jpg" ]
+
+
+caption = ["I Miss London", "Love ballons", "Vintage life ","Summer Day", "Art"]
+
+    
 5.times do |n| 
 
 	Polaroid.create!([{
-		caption: "lodon#{n} ",
-		image: "https://s7.postimg.org/8g5wro4sb/administration-architecture-big-ben-221166.jpg"
+		
+
+		caption: caption[n],
+		image: img[n]
 		}])
 
 	
