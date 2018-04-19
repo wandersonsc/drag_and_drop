@@ -1,8 +1,8 @@
 *Hello, Wold!*
 
-## Modern Drag and Drop Interface With Rails 
+## Modern Drag and Drop Interface With Rails & CoffeeScript
 
-### Contact pages are the channel your users and clients have to communicate with you. 
+###  
 
 
 
